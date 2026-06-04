@@ -16,7 +16,6 @@ rng = np.random.default_rng(RNG_SEED)
 
 
 def pairwise_distances(Y: np.ndarray) -> np.ndarray:
-    """Вычисляет матрицу попарных евклидовых расстояний для строк матрицы Y."""
     diff = Y[:, None, :] - Y[None, :, :]
     return np.sqrt(np.sum(diff ** 2, axis=2))
 
